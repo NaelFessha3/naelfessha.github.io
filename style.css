@@ -1,300 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 :root {
   --gt-navy: #003057;
   --gt-gold: #EAAA00;
   --text-color: #333;
   --bg-light: #f5f7fa;
-  --border-radius: 10px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
   margin: 0;
   padding: 0;
   background: var(--bg-light);
   color: var(--text-color);
-  line-height: 1.7;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
 }
 
-/* ── Header ──────────────────────────── */
 header {
   background: var(--gt-navy);
   color: white;
   text-align: center;
-  padding: 1.5rem 1rem 1.25rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0 2rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
 header h1 {
-  margin: 0 0 0.5rem;
-  font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin: 0.3em 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  color: white; /* Ensures bright title text on dark background */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* ── Navigation ──────────────────────── */
 nav {
   margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.25rem;
 }
 
 nav a {
   color: var(--gt-gold);
   text-decoration: none;
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.2s ease, color 0.2s ease;
+  margin: 0 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-nav a:hover,
-nav a.active {
-  background: var(--gt-gold);
-  color: var(--gt-navy);
+nav a:hover {
+  text-decoration: underline;
+  color: white;
 }
-
-/* ── Toggle Button ───────────────────── */
-.toggle-btn {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  background: var(--gt-gold);
-  color: var(--gt-navy);
-  border: none;
-  border-radius: 20px;
-  padding: 6px 14px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 0.85rem;
-  transition: opacity 0.2s ease, transform 0.15s ease;
-}
-
-.toggle-btn:hover {
-  opacity: 0.9;
-  transform: scale(1.04);
-}
-
-/* ── Container ───────────────────────── */
 .container {
   max-width: 900px;
   margin: 2rem auto;
   background: white;
-  padding: 2.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ── Hero Section ────────────────────── */
-.hero {
-  text-align: center;
-  padding: 1.5rem 1rem 2rem;
-  border-bottom: 2px solid #f0f0f0;
-  margin-bottom: 1.5rem;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  color: var(--gt-navy);
-  margin: 0 0 0.75rem;
-}
-
-.hero p {
-  font-size: 1.05rem;
-  color: #555;
-  max-width: 620px;
-  margin: 0 auto 1.75rem;
-}
-
-.hero-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-/* ── Buttons ─────────────────────────── */
-.btn {
-  display: inline-block;
-  padding: 0.55rem 1.3rem;
-  border-radius: 24px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.btn-primary {
-  background: var(--gt-navy);
-  color: white;
-}
-
-.btn-primary:hover {
-  color: white;
-}
-
-.btn-secondary {
-  background: var(--gt-gold);
-  color: var(--gt-navy);
-}
-
-.btn-secondary:hover {
-  color: var(--gt-navy);
-}
-
-/* ── Download Button ─────────────────── */
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--gt-navy);
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  margin: 0.5rem 0 1.75rem;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.download-btn:hover {
-  background: #004a8a;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* ── Profile Photo ───────────────────── */
-.profile-photo {
-  display: block;
-  margin: 0 auto 1.75rem;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  border: 4px solid var(--gt-gold);
-}
-
-/* ── Skill Tags ──────────────────────── */
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 1.25rem;
-}
-
-.skill-tag {
-  background: #eef2ff;
-  color: var(--gt-navy);
-  padding: 0.3rem 0.85rem;
-  border-radius: 20px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  border: 1px solid #c7d2fe;
-}
-
-/* ── Typography ──────────────────────── */
-h1, h2, h3, h4 {
-  color: var(--gt-navy);
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--gt-gold);
-  display: inline-block;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h4 {
-  font-size: 1rem;
-  color: #555;
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-/* ── Career Roadmap ──────────────────── */
-.roadmap {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-}
-
-.roadmap li {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.roadmap li:last-child {
-  border-bottom: none;
-}
-
-.roadmap-number {
-  min-width: 36px;
-  height: 36px;
-  background: var(--gt-navy);
-  color: var(--gt-gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
-/* ── Video Container ─────────────────── */
-.video-container {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.video-container video {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* ── Images ──────────────────────────── */
 img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-/* ── Links ───────────────────────────── */
+h1, h2, h3 {
+  color: var(--gt-navy);
+}
+
 a {
   color: var(--gt-navy);
 }
@@ -303,139 +73,95 @@ a:hover {
   color: var(--gt-gold);
 }
 
-/* ── Footer ──────────────────────────── */
 footer {
   text-align: center;
-  padding: 1.25rem 1rem;
+  padding: 1rem;
   background: var(--gt-navy);
-  color: rgba(255, 255, 255, 0.85);
+  color: white;
   margin-top: 2rem;
-  font-size: 0.9rem;
 }
 
-/* ── Responsive ──────────────────────── */
+/* Make it responsive */
 @media (max-width: 768px) {
   .container {
-    padding: 1.5rem 1rem;
-    margin: 1rem;
-    border-radius: 8px;
+    padding: 1rem;
   }
-
+  nav a {
+    display: inline-block;
+    margin: 0.4rem;
+  }
   header h1 {
-    font-size: 1.4rem;
-    padding-right: 90px;
-  }
-
-  .toggle-btn {
-    font-size: 0.75rem;
-    padding: 5px 10px;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
-
 @media (max-width: 480px) {
   body {
     font-size: 14px;
   }
-
   header h1 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
-  .hero h2 {
-    font-size: 1.25rem;
-  }
-}
-
-/* ── Dark Mode ───────────────────────── */
-body.dark-mode {
+}body.dark-mode {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #f1f1f1;
 }
 
 body.dark-mode header {
-  background-color: #1a1a2e;
-}
-
-body.dark-mode .container {
-  background-color: #1e1e2e;
-  color: #e0e0e0;
-}
-
-body.dark-mode footer {
-  background-color: #1a1a2e;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4 {
-  color: var(--gt-gold);
-}
-
-body.dark-mode h2 {
-  border-bottom-color: var(--gt-gold);
-}
-
-body.dark-mode .hero {
-  border-bottom-color: #333;
-}
-
-body.dark-mode .hero p {
-  color: #bbb;
-}
-
-body.dark-mode .skill-tag {
-  background: #2a2a4a;
-  color: #e0e0e0;
-  border-color: #4a4a7a;
-}
-
-body.dark-mode .roadmap li {
-  border-bottom-color: #333;
-}
-
-body.dark-mode .download-btn {
-  background: var(--gt-gold);
-  color: var(--gt-navy);
-}
-
-body.dark-mode .download-btn:hover {
-  background: #d4960a;
-}
-
-body.dark-mode a {
-  color: var(--gt-gold);
-}
-
-body.dark-mode a:hover {
-  color: white;
+  background-color: #1c1c1c;
 }
 
 body.dark-mode nav a {
+  color: #EAAA00;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+  color: #EAAA00;
+}
+
+/* Toggle button style */
+.toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #EAAA00;
+  color: #003057;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  opacity: 0.85;
+}
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body:not(.dark-mode) header {
+  background-color: var(--gt-navy);
+  color: white;
+}
+
+body:not(.dark-mode) header h1 {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+body:not(.dark-mode) nav a {
   color: var(--gt-gold);
 }
 
-body.dark-mode nav a:hover,
-body.dark-mode nav a.active {
-  background: var(--gt-gold);
-  color: var(--gt-navy);
-}
-
-body.dark-mode .btn-primary {
-  background: var(--gt-gold);
-  color: var(--gt-navy);
-}
-
-body.dark-mode .btn-secondary {
-  background: #2a2a4a;
-  color: var(--gt-gold);
-  border: 1px solid var(--gt-gold);
-}
-
-body.dark-mode h4 {
-  color: #aaa;
-}

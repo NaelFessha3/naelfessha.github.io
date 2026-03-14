@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nael Fessha – Resume</title>
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
   <link rel="stylesheet" href="style.css">
-</head>
+</head><script>
+function toggleMode() {
+  const body = document.body;
+  const button = document.querySelector('.toggle-btn');
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    button.textContent = '☀️ Light Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    button.textContent = '🌙 Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Apply saved theme automatically on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const button = document.querySelector('.toggle-btn');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    button.textContent = '☀️ Light Mode';
+  } else {
+    button.textContent = '🌙 Dark Mode';
+  }
+});
+</script>
 <body>
   <header>
     <h1>Resume</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
@@ -20,47 +45,34 @@
   </header>
 
   <div class="container">
-    <a href="Copy of Nael Fessha Resume 9_8_25.docx.pdf" download class="download-btn">
-      ⬇ Download Resume (PDF)
-    </a>
+    <h2>Download</h2>
+    <p><a href="Copy of Nael Fessha Resume 9_8_25.docx.pdf" download>Click here to download my resume!</a></p>
 
-    <h2>Education</h2>
-    <p>
-      <strong>Georgia Institute of Technology</strong> — B.S. in Electrical and Computer Engineering
-      <br><em>Expected May 2028</em>
-      <br>Threads:
-      <a href="https://ece.gatech.edu/circuit-technology-thread" target="_blank">Circuit Technology</a> &amp;
-      <a href="https://ece.gatech.edu/electronic-optoelectronic-devices-thread" target="_blank">Electronic &amp; Optoelectronic Devices</a>
-    </p>
+    <h3>Education</h3>
+    <p><strong>Georgia Institute of Technology</strong> – B.S. in Electrical and Computer Engineering (Expected May 2028) with Threads in<a href="https://ece.gatech.edu/circuit-technology-thread" target="_blank"> Circuit Technology Thread</a> and <a href="https://ece.gatech.edu/electronic-optoelectronic-devices-thread" target="_blank">Electronic & Optoelectronic Devices Thread</p></a>
 
-    <h2>Skills</h2>
 
-    <h3>Programming</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Python</li>
-      <li class="skill-tag">C / C++</li>
-      <li class="skill-tag">MATLAB</li>
+    <h3>Skills</h3>
+    <ul>
+      <li>Programming: Python, C/C++, MATLAB</li>
+      <li>Hardware: Arduino, Raspberry Pi, sensors, PCB basics</li>
+      <li>Tools: Git, VS Code, Jupyter</li>
     </ul>
 
-    <h3>Hardware</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Arduino</li>
-      <li class="skill-tag">Raspberry Pi</li>
-      <li class="skill-tag">Sensors</li>
-      <li class="skill-tag">PCB Basics</li>
-    </ul>
-
-    <h3>Tools</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Git</li>
-      <li class="skill-tag">VS Code</li>
-      <li class="skill-tag">Jupyter</li>
-    </ul>
-  </div>
+    
+ </div>
 
   <footer>
     &copy; 2025 Nael Fessha | Georgia Tech ECE
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

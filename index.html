@@ -2,39 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nael Fessha – ECE ePortfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Nael Fessha – ECE ePortfolio</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="resume.html">Resume</a>
-      <a href="career.html">Career Goals</a>
-      <a href="project.html">Projects</a>
-    </nav>
-  </header>
+  <h1>Nael Fessha – ECE ePortfolio</h1>
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="career.html">Career Goals</a>
+    <a href="project.html">Projects</a>
+  </nav>
+</header>
 
   <div class="container">
-    <div class="hero">
-      <h2>Welcome</h2>
-      <p>Hello! I'm <strong>Nael Fessha</strong>, an Electrical Engineering student at Georgia Tech. This ePortfolio showcases my academic journey, technical projects, and career goals in embedded systems and ECE.</p>
-      <div class="hero-links">
-        <a href="about.html" class="btn btn-primary">About Me</a>
-        <a href="project.html" class="btn btn-secondary">View Projects</a>
-        <a href="resume.html" class="btn btn-primary">Resume</a>
-        <a href="career.html" class="btn btn-secondary">Career Goals</a>
-      </div>
-    </div>
+    <h2>Welcome</h2>
+    <div class="home-photo">
+  
+       <img src="https://www.gatech.edu/sites/default/files/2022-07/visit-tech.png" alt="Nael Fessha portrait">
+</div>
+    <p>Hello! I’m <strong>Nael Fessha</strong>, an Electrical Engineering student at Georgia Tech.  
+    This ePortfolio is where I share my academic and technical journey, including my background, goals, and featured projects.</p>
+
+    <ul>
+      <li>Learn about my story in <a href="about.html">About Me</a>.</li>
+      <li>View and download my <a href="resume.html">Resume</a>.</li>
+      <li>Read about my <a href="career.html">Career Goals</a>.</li>
+      <li>Explore my <a href="project.html">Technical Projects</a>.</li>
+    </ul>
   </div>
 
   <footer>
     &copy; 2025 Nael Fessha | Georgia Tech ECE
   </footer>
-  <script src="script.js"></script>
+  <script>
+function toggleMode() {
+  const body = document.body;
+  const button = document.querySelector('.toggle-btn');
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    button.textContent = '☀️ Light Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    button.textContent = '🌙 Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Load saved preference
+window.onload = () => {
+  const savedTheme = localStorage.getItem('theme');
+  const button = document.querySelector('.toggle-btn');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    button.textContent = '☀️ Light Mode';
+  }
+};
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

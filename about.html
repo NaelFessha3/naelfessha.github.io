@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Nael Fessha</title>
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
   <link rel="stylesheet" href="style.css">
-</head>
+</head><script>
+function toggleMode() {
+  const body = document.body;
+  const button = document.querySelector('.toggle-btn');
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    button.textContent = '☀️ Light Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    button.textContent = '🌙 Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Apply saved theme automatically on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const button = document.querySelector('.toggle-btn');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    button.textContent = '☀️ Light Mode';
+  } else {
+    button.textContent = '🌙 Dark Mode';
+  }
+});
+</script>
 <body>
   <header>
-    <h1>About Me</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+    <h1>About Nael Fessha</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
@@ -18,22 +43,31 @@
       <a href="project.html">Projects</a>
     </nav>
   </header>
-
+ 
   <div class="container">
-    <img src="3F4542F7-BBD8-45A6-8C08-78C17F081D3C.jpeg"
-         alt="Nael Fessha Photo"
-         class="profile-photo">
+    <h3>About Me</h3>
+    <img src="3F4542F7-BBD8-45A6-8C08-78C17F081D3C.jpeg" 
+       alt="Nael Fessha Photo"
+       style="display:block; margin:auto; width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+    <p>Hi, I’m Nael Fessha, an Electrical Engineering student at Georgia Tech with a passion for innovation, problem-solving, and building technology that makes a real impact. I’m fascinated by how electronics and computer systems come together to power the modern world — from smart devices to automated systems that make life more efficient and connected. </p>
 
-    <p>Hi, I'm Nael Fessha, an Electrical Engineering student at Georgia Tech with a passion for innovation, problem-solving, and building technology that makes a real impact. I'm fascinated by how electronics and computer systems come together to power the modern world — from smart devices to automated systems that make life more efficient and connected.</p>
-
-    <p>At Georgia Tech, I'm sharpening my technical and analytical skills while working on projects that challenge me to think creatively and engineer practical solutions. I thrive in collaborative environments, where teamwork and fresh ideas drive progress.</p>
-
-    <p>Beyond the lab and classroom, you'll find me playing soccer or basketball, diving into new tech, or connecting with others who share the same curiosity for learning and growth. This website is my personal space to share my journey — a reflection of who I am, what I'm building, and where I'm headed next.</p>
-  </div>
+    <p>At Georgia Tech, I’m sharpening my technical and analytical skills while working on projects that challenge me to think creatively and engineer practical solutions. I thrive in collaborative environments, where teamwork and fresh ideas drive progress. .</p>
+<p>Beyond the lab and classroom, you’ll find me playing soccer or basketball, diving into new tech, or connecting with others who share the same curiosity for learning and growth. This website is my personal space to share my journey — a reflection of who I am, what I’m building, and where I’m headed next. </p>
+   
+ </div>
 
   <footer>
     &copy; 2025 Nael Fessha | Georgia Tech ECE
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

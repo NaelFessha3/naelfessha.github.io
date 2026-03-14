@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career Goals – Nael Fessha</title>
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
   <link rel="stylesheet" href="style.css">
-</head>
+</head><script>
+function toggleMode() {
+  const body = document.body;
+  const button = document.querySelector('.toggle-btn');
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    button.textContent = '☀️ Light Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    button.textContent = '🌙 Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Apply saved theme automatically on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const button = document.querySelector('.toggle-btn');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    button.textContent = '☀️ Light Mode';
+  } else {
+    button.textContent = '🌙 Dark Mode';
+  }
+});
+</script>
 <body>
   <header>
     <h1>Career Goals</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
@@ -22,34 +47,20 @@
   <div class="container">
     <p>My long-term goal is to design and develop embedded systems that bridge the gap between hardware and intelligent software — especially in robotics, IoT, or smart energy applications. I want to contribute to systems that are efficient, connected, and sustainable.</p>
 
-    <h2>My Roadmap</h2>
-    <ul class="roadmap">
-      <li>
-        <span class="roadmap-number">1</span>
-        Gain hands-on experience through co-ops or internships in embedded systems.
-      </li>
-      <li>
-        <span class="roadmap-number">2</span>
-        Master C/C++, real-time operating systems, and microcontroller design.
-      </li>
-      <li>
-        <span class="roadmap-number">3</span>
-        Contribute to open-source hardware and IoT frameworks.
-      </li>
-      <li>
-        <span class="roadmap-number">4</span>
-        Earn advanced certifications in embedded design or networking.
-      </li>
-      <li>
-        <span class="roadmap-number">5</span>
-        Grow into a systems engineer or R&amp;D role focusing on intelligent hardware.
-      </li>
-    </ul>
-  </div>
+    <h3>My Roadmap</h3>
+    <ol>
+      <li>Gain hands-on experience through co-ops or internships in embedded systems.</li>
+      <li>Master C/C++, real-time operating systems, and microcontroller design.</li>
+      <li>Contribute to open-source hardware and IoT frameworks.</li>
+      <li>Earn advanced certifications in embedded design or networking.</li>
+      <li>Grow into a systems engineer or R&D role focusing on intelligent hardware.</li>
+    </ol>
+ </div>
 
   <footer>
     &copy; 2025 Nael Fessha | Georgia Tech ECE
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
+
+

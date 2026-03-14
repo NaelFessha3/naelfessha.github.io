@@ -1,14 +1,8 @@
-// script.js — Dark Mode Toggle for Nael Fessha ePortfolio
-
-// Called when user clicks the button
 function toggleMode() {
   const body = document.body;
   const button = document.querySelector('.toggle-btn');
-  
-  // Toggle dark-mode class
   body.classList.toggle('dark-mode');
-  
-  // Update button text and save preference
+
   if (body.classList.contains('dark-mode')) {
     button.textContent = '☀️ Light Mode';
     localStorage.setItem('theme', 'dark');
@@ -18,16 +12,21 @@ function toggleMode() {
   }
 }
 
-// Apply the saved theme when the page loads
+function setActiveNav() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.getAttribute('href') === path || (path === '' && link.getAttribute('href') === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   const button = document.querySelector('.toggle-btn');
-
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
     if (button) button.textContent = '☀️ Light Mode';
-  } else {
-    document.body.classList.remove('dark-mode');
-    if (button) button.textContent = '🌙 Dark Mode';
   }
+  setActiveNav();
 });

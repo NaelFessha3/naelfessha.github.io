@@ -220,26 +220,68 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.45rem;
   border-bottom: 2px solid var(--gt-gold);
-  display: inline-block;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
-  font-weight: 600;
-  margin-top: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1.25rem;
   margin-bottom: 0.4rem;
+}
+
+/* ── Page Header (title + action row) ── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h2 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.page-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ── Section Divider ─────────────────── */
+.section-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
 }
 
 /* ── Career Roadmap ──────────────────── */
@@ -396,6 +438,18 @@ body.dark-mode .skill-tag {
 
 body.dark-mode .roadmap li {
   border-bottom-color: #333;
+}
+
+body.dark-mode .page-header {
+  border-bottom-color: #2a2a4a;
+}
+
+body.dark-mode .page-header p {
+  color: #9ca3af;
+}
+
+body.dark-mode .section-divider {
+  border-top-color: #2a2a4a;
 }
 
 body.dark-mode .download-btn {

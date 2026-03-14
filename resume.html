@@ -3,64 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nael Fessha – Resume</title>
+  <title>Resume – Nael Fessha</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Resume</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="resume.html">Resume</a>
-      <a href="career.html">Career Goals</a>
-      <a href="project.html">Projects</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <a href="Copy of Nael Fessha Resume 9_8_25.docx.pdf" download class="download-btn">
-      ⬇ Download Resume (PDF)
-    </a>
+<div id="scroll-progress"></div>
 
-    <h2>Education</h2>
-    <p>
-      <strong>Georgia Institute of Technology</strong> — B.S. in Electrical and Computer Engineering
-      <br><em>Expected May 2028</em>
-      <br>Threads:
-      <a href="https://ece.gatech.edu/circuit-technology-thread" target="_blank">Circuit Technology</a> &amp;
-      <a href="https://ece.gatech.edu/electronic-optoelectronic-devices-thread" target="_blank">Electronic &amp; Optoelectronic Devices</a>
-    </p>
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html"><h1><span>Nael Fessha</span> — ECE ePortfolio</h1></a>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="career.html">Career</a>
+        <a href="project.html">Projects</a>
+      </nav>
+      <button class="toggle-btn" onclick="toggleMode()">🌙 Dark</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <h2>Skills</h2>
+<div class="container">
+  <a href="Copy of Nael Fessha Resume 9_8_25.docx.pdf" download class="download-btn">
+    <i class="fas fa-download"></i> Download Resume (PDF)
+  </a>
 
-    <h3>Programming</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Python</li>
-      <li class="skill-tag">C / C++</li>
-      <li class="skill-tag">MATLAB</li>
-    </ul>
-
-    <h3>Hardware</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Arduino</li>
-      <li class="skill-tag">Raspberry Pi</li>
-      <li class="skill-tag">Sensors</li>
-      <li class="skill-tag">PCB Basics</li>
-    </ul>
-
-    <h3>Tools</h3>
-    <ul class="skill-tags">
-      <li class="skill-tag">Git</li>
-      <li class="skill-tag">VS Code</li>
-      <li class="skill-tag">Jupyter</li>
-    </ul>
+  <h2>Education</h2>
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Aug 2024 – Expected May 2028</div>
+      <div class="timeline-title">Georgia Institute of Technology</div>
+      <div class="timeline-sub">
+        B.S. in Electrical and Computer Engineering<br>
+        Threads:
+        <a href="https://ece.gatech.edu/circuit-technology-thread" target="_blank">Circuit Technology</a>
+        &amp;
+        <a href="https://ece.gatech.edu/electronic-optoelectronic-devices-thread" target="_blank">Electronic &amp; Optoelectronic Devices</a>
+      </div>
+    </div>
   </div>
 
-  <footer>
-    &copy; 2025 Nael Fessha | Georgia Tech ECE
-  </footer>
-  <script src="script.js"></script>
+  <h2>Skills</h2>
+
+  <h3>Programming</h3>
+  <ul class="skill-tags reveal">
+    <li class="skill-tag">Python</li>
+    <li class="skill-tag">C / C++</li>
+    <li class="skill-tag">MATLAB</li>
+  </ul>
+
+  <h3>Hardware</h3>
+  <ul class="skill-tags reveal">
+    <li class="skill-tag">Arduino</li>
+    <li class="skill-tag">Raspberry Pi</li>
+    <li class="skill-tag">Sensors</li>
+    <li class="skill-tag">PCB Basics</li>
+  </ul>
+
+  <h3>Tools</h3>
+  <ul class="skill-tags reveal">
+    <li class="skill-tag">Git</li>
+    <li class="skill-tag">VS Code</li>
+    <li class="skill-tag">Jupyter</li>
+  </ul>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="https://github.com/NaelFessha3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Nael Fessha &nbsp;&middot;&nbsp; Georgia Tech ECE</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="script.js"></script>
 </body>
 </html>

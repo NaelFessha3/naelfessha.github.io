@@ -5,51 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects – Nael Fessha</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Technical Projects</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="resume.html">Resume</a>
-      <a href="career.html">Career Goals</a>
-      <a href="project.html">Projects</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <section id="discovery-project">
-      <h2>Discovery Project – Temperature-Controlled Fan System</h2>
+<div id="scroll-progress"></div>
+
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="index.html"><h1><span>Nael Fessha</span> — ECE ePortfolio</h1></a>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="career.html">Career</a>
+        <a href="project.html">Projects</a>
+      </nav>
+      <button class="toggle-btn" onclick="toggleMode()">🌙 Dark</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Technical Projects</h2>
+
+  <!-- Project Card -->
+  <div class="project-card reveal">
+    <div class="project-card-header">
+      <h3>Discovery Project — Temperature-Controlled Fan System</h3>
+      <div class="project-meta">
+        <span class="project-badge"><i class="fas fa-calendar-alt"></i> Fall 2024</span>
+        <span class="project-badge gold"><i class="fas fa-microchip"></i> Embedded Systems</span>
+        <span class="project-badge"><i class="fab fa-github"></i>
+          <a href="https://github.com/NaelFessha3/naelfessha3.github.io/blob/main/code.ino"
+             target="_blank" style="color:inherit; text-decoration:none; margin-left:4px;">View Code</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="project-card-body">
 
       <h3>The Problem</h3>
       <p>
-        For my Discovery Project, I wanted to challenge myself with a hands-on system that involved real ECE concepts such as
-        sensors, microcontroller programming, and motor control. The core question I set out to solve was:
-        <strong>"How can I build a small electronic system that senses temperature and responds automatically by controlling a fan?"</strong>
-        Although simple, this problem pushed me to explore embedded systems and integrate multiple hardware components.
+        For my Discovery Project, I challenged myself with a hands-on system involving real ECE concepts —
+        sensors, microcontroller programming, and motor control. The question I set out to answer was:
+        <strong>"How can I build a system that senses temperature and automatically controls a fan?"</strong>
       </p>
 
       <h3>The Process</h3>
 
       <h4>1. Empathize &amp; Understand</h4>
       <p>
-        I researched temperature sensors and learned that the <strong>DHT11</strong> would be easy to interface with an Arduino.
-        I also studied how PWM works for controlling fan speed and how motor drivers protect the microcontroller.
+        I researched temperature sensors and learned that the <strong>DHT11</strong> would be easy to interface
+        with an Arduino. I also studied how PWM works for controlling fan speed and how motor drivers protect
+        the microcontroller.
       </p>
 
       <h4>2. Define</h4>
-      <p>The system needed to be able to:</p>
+      <p>The system needed to:</p>
       <ul>
         <li>Read live temperature values</li>
-        <li>Display the readings clearly</li>
-        <li>Turn a fan on when the temperature rises</li>
-        <li>Adjust fan speed automatically</li>
+        <li>Display readings clearly on an LCD</li>
+        <li>Turn a fan on when temperature rises</li>
+        <li>Adjust fan speed automatically using PWM</li>
       </ul>
 
-      <h4>3. Ideate</h4>
-      <p>I selected the following components:</p>
+      <h4>3. Ideate — Components Selected</h4>
       <ul class="skill-tags">
         <li class="skill-tag">Arduino Uno</li>
         <li class="skill-tag">DHT11 Sensor</li>
@@ -57,15 +84,14 @@
         <li class="skill-tag">L298N Motor Driver</li>
         <li class="skill-tag">5V DC Fan</li>
       </ul>
-      <p>I planned wiring diagrams, reviewed data sheets, and learned which pins connect to the LCD, sensor, and driver.</p>
+      <p>I planned wiring diagrams, reviewed data sheets, and mapped each component's pin connections.</p>
 
       <h4>4. Prototype</h4>
-      <p>I built the first version on a breadboard:</p>
       <ul>
         <li>Connected the DHT11 to Arduino pin 7</li>
         <li>Wired the LCD using 4-bit parallel mode</li>
         <li>Connected the fan to the L298N motor driver outputs</li>
-        <li>Programmed PWM logic to control speed based on temperature</li>
+        <li>Programmed PWM logic to modulate speed based on temperature thresholds</li>
       </ul>
 
       <h4>5. Test</h4>
@@ -76,33 +102,33 @@
 
       <h3>The Outcome</h3>
       <p>
-        The final system successfully reads real-time temperature, displays it on the LCD, and controls the fan's speed
-        automatically based on threshold values. The project clearly demonstrates a closed-loop control system using
-        microcontroller logic, sensors, and output hardware.
+        The final system successfully reads real-time temperature, displays it on the LCD, and controls
+        fan speed automatically — a working closed-loop control system using microcontroller logic,
+        sensors, and output hardware.
       </p>
 
       <h3>Successes &amp; Challenges</h3>
 
       <h4>Successes</h4>
       <ul>
-        <li>Accurate temperature readings</li>
-        <li>Real-time display using LCD</li>
-        <li>Automatic fan speed control using PWM</li>
+        <li>Accurate temperature readings from the DHT11</li>
+        <li>Real-time display updating on the LCD</li>
+        <li>Automatic fan speed control via PWM</li>
         <li>Successful integration of all hardware components</li>
       </ul>
 
       <h4>Challenges</h4>
       <ul>
         <li>Voltage drops caused the LCD to dim when the fan activated</li>
-        <li>A larger 5V fan required too much current for the Arduino to supply</li>
-        <li>The DHT11 sometimes produced sensor errors until delays were added</li>
+        <li>A larger 5V fan required too much current for the Arduino</li>
+        <li>DHT11 sensor errors until timing delays were tuned</li>
         <li>L298N voltage drop reduced fan performance</li>
       </ul>
 
       <h3>Skills Gained</h3>
       <ul class="skill-tags">
         <li class="skill-tag">Arduino / C++</li>
-        <li class="skill-tag">DHT11 Sensor</li>
+        <li class="skill-tag">DHT11 Integration</li>
         <li class="skill-tag">LCD Interfacing</li>
         <li class="skill-tag">PWM Motor Control</li>
         <li class="skill-tag">Power Management</li>
@@ -110,27 +136,30 @@
         <li class="skill-tag">System Integration</li>
       </ul>
 
-      <h3>Arduino Code</h3>
-      <p>
-        <a href="https://github.com/NaelFessha3/naelfessha3.github.io/blob/main/code.ino" target="_blank" class="btn btn-primary">
-          View Code on GitHub
-        </a>
-      </p>
-
       <h3>Project Demonstration</h3>
-      <p>This video demonstrates the temperature-controlled fan responding to real temperature changes, along with the LCD displaying live data.</p>
+      <p>The fan responds to real temperature changes while the LCD displays live sensor data.</p>
       <div class="video-container">
         <video controls>
           <source src="IMG_1908.MOV.mp4" type="video/mp4">
           Your browser does not support video playback.
         </video>
       </div>
-    </section>
-  </div>
 
-  <footer>
-    &copy; 2025 Nael Fessha | Georgia Tech ECE
-  </footer>
-  <script src="script.js"></script>
+    </div><!-- /.project-card-body -->
+  </div><!-- /.project-card -->
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="https://github.com/NaelFessha3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Nael Fessha &nbsp;&middot;&nbsp; Georgia Tech ECE</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="script.js"></script>
 </body>
 </html>

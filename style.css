@@ -160,6 +160,18 @@ nav a.active {
   color: var(--gt-navy);
 }
 
+/* ── Resume Download Bar ─────────────── */
+.resume-top {
+  text-align: center;
+  padding: 1.25rem 0 1.75rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.resume-top .download-btn {
+  margin: 0;
+}
+
 /* ── Download Button ─────────────────── */
 .download-btn {
   display: inline-flex;
@@ -450,6 +462,10 @@ body.dark-mode .page-header p {
 
 body.dark-mode .section-divider {
   border-top-color: #2a2a4a;
+}
+
+body.dark-mode .resume-top {
+  border-bottom-color: #2a2a4a;
 }
 
 body.dark-mode .download-btn {

@@ -5,83 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nael Fessha – ECE ePortfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <header>
+    <h1>Nael Fessha – ECE ePortfolio</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="career.html">Career Goals</a>
+      <a href="project.html">Projects</a>
+    </nav>
+  </header>
 
-<div id="scroll-progress"></div>
-
-<header>
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="index.html"><h1><span>Nael Fessha</span> — ECE ePortfolio</h1></a>
+  <div class="container">
+    <div class="hero">
+      <h2>Welcome</h2>
+      <p>Hello! I'm <strong>Nael Fessha</strong>, an Electrical Engineering student at Georgia Tech. This ePortfolio showcases my academic journey, technical projects, and career goals in embedded systems and ECE.</p>
+      <div class="hero-links">
+        <a href="about.html" class="btn btn-primary">About Me</a>
+        <a href="project.html" class="btn btn-secondary">View Projects</a>
+        <a href="resume.html" class="btn btn-primary">Resume</a>
+        <a href="career.html" class="btn btn-secondary">Career Goals</a>
+      </div>
     </div>
-    <div class="header-right">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="career.html">Career</a>
-        <a href="project.html">Projects</a>
-      </nav>
-      <button class="toggle-btn" onclick="toggleMode()">🌙 Dark</button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
   </div>
-</header>
 
-<!-- Full-width Hero -->
-<section class="page-hero">
-  <img src="3F4542F7-BBD8-45A6-8C08-78C17F081D3C.jpeg" alt="Nael Fessha" class="hero-avatar">
-  <h2>Hi, I'm Nael Fessha</h2>
-  <p class="hero-subtitle">Electrical &amp; Computer Engineering @ Georgia Tech</p>
-  <p class="hero-desc">Building the future of embedded systems and IoT — one circuit at a time.</p>
-  <div class="hero-links">
-    <a href="about.html" class="btn btn-secondary">About Me</a>
-    <a href="project.html" class="btn btn-secondary">View Projects</a>
-    <a href="resume.html" class="btn btn-outline">Resume</a>
-  </div>
-</section>
-
-<!-- Feature Cards -->
-<div class="container">
-  <div class="feature-cards">
-    <a href="about.html" class="feature-card reveal">
-      <span class="feature-icon">👤</span>
-      <h3>About Me</h3>
-      <p>My background, passions, and journey in electrical engineering.</p>
-    </a>
-    <a href="project.html" class="feature-card reveal">
-      <span class="feature-icon">⚡</span>
-      <h3>Projects</h3>
-      <p>Hands-on embedded systems and hardware projects I've built.</p>
-    </a>
-    <a href="resume.html" class="feature-card reveal">
-      <span class="feature-icon">📄</span>
-      <h3>Resume</h3>
-      <p>My education, technical skills, and experience at a glance.</p>
-    </a>
-    <a href="career.html" class="feature-card reveal">
-      <span class="feature-icon">🎯</span>
-      <h3>Career Goals</h3>
-      <p>My roadmap toward embedded systems and IoT engineering.</p>
-    </a>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-social">
-      <a href="https://github.com/NaelFessha3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Nael Fessha &nbsp;&middot;&nbsp; Georgia Tech ECE</p>
-  </div>
-</footer>
-
-<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-<script src="script.js"></script>
+  <footer>
+    &copy; 2025 Nael Fessha | Georgia Tech ECE
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

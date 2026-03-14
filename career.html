@@ -5,74 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career Goals – Nael Fessha</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <header>
+    <h1>Career Goals</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="career.html">Career Goals</a>
+      <a href="project.html">Projects</a>
+    </nav>
+  </header>
 
-<div id="scroll-progress"></div>
+  <div class="container">
+    <p>My long-term goal is to design and develop embedded systems that bridge the gap between hardware and intelligent software — especially in robotics, IoT, or smart energy applications. I want to contribute to systems that are efficient, connected, and sustainable.</p>
 
-<header>
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="index.html"><h1><span>Nael Fessha</span> — ECE ePortfolio</h1></a>
-    </div>
-    <div class="header-right">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="career.html">Career</a>
-        <a href="project.html">Projects</a>
-      </nav>
-      <button class="toggle-btn" onclick="toggleMode()">🌙 Dark</button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <h2>My Roadmap</h2>
+    <ul class="roadmap">
+      <li>
+        <span class="roadmap-number">1</span>
+        Gain hands-on experience through co-ops or internships in embedded systems.
+      </li>
+      <li>
+        <span class="roadmap-number">2</span>
+        Master C/C++, real-time operating systems, and microcontroller design.
+      </li>
+      <li>
+        <span class="roadmap-number">3</span>
+        Contribute to open-source hardware and IoT frameworks.
+      </li>
+      <li>
+        <span class="roadmap-number">4</span>
+        Earn advanced certifications in embedded design or networking.
+      </li>
+      <li>
+        <span class="roadmap-number">5</span>
+        Grow into a systems engineer or R&amp;D role focusing on intelligent hardware.
+      </li>
+    </ul>
   </div>
-</header>
 
-<div class="container">
-  <h2>Career Goals</h2>
-
-  <p class="reveal">My long-term goal is to design and develop embedded systems that bridge the gap between hardware and intelligent software — especially in robotics, IoT, or smart energy applications. I want to contribute to systems that are efficient, connected, and sustainable.</p>
-
-  <h2>My Roadmap</h2>
-  <ul class="roadmap">
-    <li class="reveal">
-      <span class="roadmap-number">1</span>
-      <span>Gain hands-on experience through co-ops or internships in embedded systems.</span>
-    </li>
-    <li class="reveal">
-      <span class="roadmap-number">2</span>
-      <span>Master C/C++, real-time operating systems, and microcontroller design.</span>
-    </li>
-    <li class="reveal">
-      <span class="roadmap-number">3</span>
-      <span>Contribute to open-source hardware and IoT frameworks.</span>
-    </li>
-    <li class="reveal">
-      <span class="roadmap-number">4</span>
-      <span>Earn advanced certifications in embedded design or networking.</span>
-    </li>
-    <li class="reveal">
-      <span class="roadmap-number">5</span>
-      <span>Grow into a systems engineer or R&amp;D role focusing on intelligent hardware.</span>
-    </li>
-  </ul>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-social">
-      <a href="https://github.com/NaelFessha3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Nael Fessha &nbsp;&middot;&nbsp; Georgia Tech ECE</p>
-  </div>
-</footer>
-
-<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-<script src="script.js"></script>
+  <footer>
+    &copy; 2025 Nael Fessha | Georgia Tech ECE
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

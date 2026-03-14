@@ -3,60 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About – Nael Fessha</title>
+  <title>About Nael Fessha</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <header>
+    <h1>About Me</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="career.html">Career Goals</a>
+      <a href="project.html">Projects</a>
+    </nav>
+  </header>
 
-<div id="scroll-progress"></div>
+  <div class="container">
+    <img src="3F4542F7-BBD8-45A6-8C08-78C17F081D3C.jpeg"
+         alt="Nael Fessha Photo"
+         class="profile-photo">
 
-<header>
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="index.html"><h1><span>Nael Fessha</span> — ECE ePortfolio</h1></a>
-    </div>
-    <div class="header-right">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="career.html">Career</a>
-        <a href="project.html">Projects</a>
-      </nav>
-      <button class="toggle-btn" onclick="toggleMode()">🌙 Dark</button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <p>Hi, I'm Nael Fessha, an Electrical Engineering student at Georgia Tech with a passion for innovation, problem-solving, and building technology that makes a real impact. I'm fascinated by how electronics and computer systems come together to power the modern world — from smart devices to automated systems that make life more efficient and connected.</p>
+
+    <p>At Georgia Tech, I'm sharpening my technical and analytical skills while working on projects that challenge me to think creatively and engineer practical solutions. I thrive in collaborative environments, where teamwork and fresh ideas drive progress.</p>
+
+    <p>Beyond the lab and classroom, you'll find me playing soccer or basketball, diving into new tech, or connecting with others who share the same curiosity for learning and growth. This website is my personal space to share my journey — a reflection of who I am, what I'm building, and where I'm headed next.</p>
   </div>
-</header>
 
-<div class="container">
-  <img src="3F4542F7-BBD8-45A6-8C08-78C17F081D3C.jpeg"
-       alt="Nael Fessha"
-       class="profile-photo">
-
-  <h2>About Me</h2>
-
-  <p class="reveal">Hi, I'm Nael Fessha, an Electrical Engineering student at Georgia Tech with a passion for innovation, problem-solving, and building technology that makes a real impact. I'm fascinated by how electronics and computer systems come together to power the modern world — from smart devices to automated systems that make life more efficient and connected.</p>
-
-  <p class="reveal">At Georgia Tech, I'm sharpening my technical and analytical skills while working on projects that challenge me to think creatively and engineer practical solutions. I thrive in collaborative environments, where teamwork and fresh ideas drive progress.</p>
-
-  <p class="reveal">Beyond the lab and classroom, you'll find me playing soccer or basketball, diving into new tech, or connecting with others who share the same curiosity for learning and growth. This website is my personal space to share my journey — a reflection of who I am, what I'm building, and where I'm headed next.</p>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-social">
-      <a href="https://github.com/NaelFessha3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Nael Fessha &nbsp;&middot;&nbsp; Georgia Tech ECE</p>
-  </div>
-</footer>
-
-<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-<script src="script.js"></script>
+  <footer>
+    &copy; 2025 Nael Fessha | Georgia Tech ECE
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
